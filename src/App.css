@@ -1,0 +1,73 @@
+
+/* Import Tailwind CSS */
+@import "tailwindcss";
+
+/* Custom Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+}
+
+/* Input Focus Remove Default Outline */
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/* Print Styles - Hide buttons when printing */
+@media print {
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  .shadow-md {
+    box-shadow: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+}
+
+/* Smooth Page Transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply Animation to Main Containers */
+.p-6 {
+  animation: fadeIn 0.3s ease-in-out;
+}
